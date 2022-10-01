@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 14px 5%;
+    height: 60px;
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .header__padlock {
+            padding-right: 10px;
+        }
+
+        .header__txt {
+            margin: 0;
+            font-family: 'Niveau Grotesk', sans-serif;
+            // font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+}

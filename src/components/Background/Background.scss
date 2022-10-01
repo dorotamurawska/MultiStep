@@ -1,0 +1,36 @@
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    z-index: -1;
+    overflow: hidden;
+
+    &__wrap-img:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__wrap-img:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__wrap-img:nth-child(3) {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        // z-index: 2;
+    }
+
+    &__ellipse-blue,
+    &__ellipse-purple,
+    &__arrows {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
