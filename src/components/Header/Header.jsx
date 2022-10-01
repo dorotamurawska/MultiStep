@@ -11,7 +11,8 @@ const Header = () => {
             <img src={logo} className="header__logo" alt="logo" />
             <div className="header__wrap">
                 <img src={padlock} className="header__padlock" alt="padlock icon" />
-                <p className="header__txt">{`Safe & Secure`}</p></div>
+                <p className="header__txt">{`Safe & Secure`}</p>
+            </div>
         </header>
     );
 }

@@ -1,0 +1,20 @@
+.button {
+    box-sizing: border-box;
+    padding: 14px 31px 14px;
+    border: 2px transparent solid;
+    border-radius: 5px;
+    background-color: var(--orange);
+    color: var(--btn-txt);
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    // line-height: 32px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #fff;
+        color: var(--orange);
+        border: 2px var(--orange) solid;
+    }
+}
