@@ -1,0 +1,9 @@
+.line {
+    width: 50%;
+    height: 2px;
+    background-color: var(--dark-txt);
+
+    &.active {
+        background-color: var(--blue);
+    }
+}

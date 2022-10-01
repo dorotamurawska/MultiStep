@@ -1,14 +1,18 @@
 .input {
     display: block;
     box-sizing: border-box;
-    padding: 16px 16px 12px;
+    padding: 16px;
     margin: 16px 0 28px;
     min-width: 320px;
     box-shadow: 0px 4px 16px #CCCCCC;
     border-radius: 5px;
     outline: none;
     border: none;
-    // font-family: 'Neuzeit Grotesk', sans-serif;
+    // font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--dark-txt);
+    font-family: 'Neuzeit Grotesk', sans-serif;
 
     &::placeholder {
         // font-family: 'Neuzeit Grotesk', sans-serif;

@@ -1,7 +1,44 @@
 .step-one {
     padding: 28px 100px;
+    font-family: 'Neuzeit Grotesk', sans-serif;
+    color: var(--dark-txt);
 
     &__title {
+        width: 60%;
+        max-width: 500px;
+        margin: 0;
         text-transform: capitalize;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 48px;
+        letter-spacing: -0.01em;
+    }
+
+    &__subtitle {
+        margin: 28px 0 0;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.01em;
+    }
+
+    &__description {
+        margin: 0;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        max-width: 370px;
+
+        .button {
+            width: 65%;
+            min-width: 216px;
+            align-self: flex-end;
+        }
     }
 }

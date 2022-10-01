@@ -2,10 +2,14 @@
 import './Input.scss';
 
 const Input = (props) => {
-    const { txt } = props;
+    const { txt, value, onChange } = props;
     return (
-        <input className="input"
+        <input
+            value={value}
+            onChange={onChange}
+            className="input"
             placeholder={txt}
+            maxLength= {15}
         />
     );
 }

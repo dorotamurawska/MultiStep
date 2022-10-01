@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './font.css';
 
 body {
   margin: 0;
@@ -8,7 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-} 
+}
+
+:root {
+  /* box-sizing: border-box; */
+  font-family: 'Neuzeit Grotesk', sans-serif;
+  color: var(--dark-txt);
+  background-color: var(--bgc);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
