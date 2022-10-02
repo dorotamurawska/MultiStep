@@ -41,4 +41,22 @@
             align-self: flex-end;
         }
     }
+
+    &__btn-no-adress {
+        margin: 28px 0 84px;
+        padding: 0;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 28px;
+        font-family: 'Neuzeit Grotesk', sans-serif;
+        color: var(--blue);
+        border: none;
+        cursor: pointer;
+    }
+
+    &__number-of-results {
+        margin: 28px 0 14px;
+        padding: 0;
+        color: var(--blue);
+    }
 }

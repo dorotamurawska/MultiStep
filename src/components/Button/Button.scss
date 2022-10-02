@@ -12,9 +12,14 @@
     cursor: pointer;
     transition: 0.2s;
 
-    &:hover {
+    &:hover:not(:disabled) {
         background-color: #fff;
         color: var(--orange);
         border: 2px var(--orange) solid;
+    }
+
+    &:disabled {
+        opacity: 50%;
+        cursor: auto;
     }
 }
