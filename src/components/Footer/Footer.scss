@@ -1,8 +1,5 @@
 .footer {
     box-sizing: border-box;
-    position: absolute;
-    bottom: 6px;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -11,7 +8,6 @@
     background-color: #fff;
     color: var(--dark-txt);
     font-family: 'Niveau Grotesk', sans-serif;
-    // font-weight: 400;
     font-size: 12px;
     line-height: 21px;
 

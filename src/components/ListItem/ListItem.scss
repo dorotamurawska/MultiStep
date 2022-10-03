@@ -1,0 +1,32 @@
+.list-item {
+    box-sizing: border-box;
+    height: 63px;
+    width: 100%;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &__txt {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__check {
+        filter: invert(89%) sepia(7%) saturate(3%) hue-rotate(315deg) brightness(98%) contrast(78%);
+    }
+
+    &:hover,
+    &.active {
+        background-color: var(--blue);
+
+        .list-item__check {
+            filter: invert(100%) sepia(0%) saturate(3484%) hue-rotate(142deg) brightness(111%) contrast(110%);
+        }
+    }
+
+}

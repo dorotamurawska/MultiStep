@@ -3,7 +3,7 @@
     width: 21px;
     height: 21px;
     line-height: 21px;
-    background-color: var(--btn-txt);
+    background-color: var(--bright);
     border-radius: 50%;
     text-align: center;
     font-weight: 700;
@@ -11,7 +11,7 @@
     border: solid 2px var(--dark-txt);
 
     &.active {
-        color: var(--btn-txt);
+        color: var(--bright);
         background-color: var(--blue);
         border: solid 2px var(--blue);
     }

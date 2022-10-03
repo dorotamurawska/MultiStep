@@ -3,6 +3,7 @@ import { useState } from 'react';
 // components:
 import Button from '../Button/Button';
 import Input from '../Input/Input';
+import ListItem from '../ListItem/ListItem';
 
 // data:
 import { adresses } from '../../dataForApp/adresses';
@@ -10,13 +11,14 @@ import { adresses } from '../../dataForApp/adresses';
 // style:
 import './StepOne.scss';
 
-const StepOne = () => {
+const StepOne = ({ setCurrentStep }) => {
 
     const [inputAdress, setInputAdress] = useState('');
     const [searchAdressResult, setSearchAdressResult] = useState([]);
     const [btnFindAddressVisible, setFindAddressVisible] = useState(true);
     const [btnNoAddressVisible, setBtnNoAddressVisible] = useState(false);
     const [numberOfResultsVisible, setNumberOfResultsVisible] = useState(false);
+    const [activeListElem, setActiveListElem] = useState(undefined);
 
     const adressData = adresses;
 
@@ -26,6 +28,7 @@ const StepOne = () => {
         setBtnNoAddressVisible(false);
         setNumberOfResultsVisible(false);
         setSearchAdressResult([]);
+        setActiveListElem(undefined);
     };
 
     const btnDisabled = inputAdress === '' ? true : false;
@@ -39,16 +42,29 @@ const StepOne = () => {
         setFindAddressVisible(false);
     };
 
-    const handleGoToStepTwo = () => { };
+    const handleActiveListElement = (e) => setActiveListElem(e.currentTarget.id);
+
+    const handleGoToStepTwo = () => setCurrentStep(2);
 
     const renderBtnFindAddressVisible = btnFindAddressVisible ?
         <Button
             txt={'Find address'}
             disabled={btnDisabled}
         /> : null;
-    const renderSearchAdressResult = searchAdressResult.map(result => <p key={result.id}>{result.street}</p>);
+
+    const renderSearchAdressResult = searchAdressResult.map(result => <ListItem key={result.id} data={result} onClick={handleActiveListElement} active={result.id === parseInt(activeListElem)} />);
+
     const renderNumberOfResults = numberOfResultsVisible ? <p className="step-one__number-of-results">{`${searchAdressResult.length} Results`}</p> : null;
     const renderBtnNoAddress = btnNoAddressVisible ? <button className="step-one__btn-no-adress" onClick={handleGoToStepTwo}>My address is not on the list</button> : null;
+
+    const renderBtnContinueVisible = activeListElem !== undefined ?
+        <div className="step-one__form">
+            <Button
+                txt={'Continue'}
+                disabled={btnDisabled}
+                onClick={handleGoToStepTwo}
+            />
+        </div> : null;
 
     return (
         <main className="step-one">
@@ -64,9 +80,12 @@ const StepOne = () => {
                 {renderBtnFindAddressVisible}
             </form>
             {renderNumberOfResults}
-            {renderSearchAdressResult}
+            <div className="step-one__list">
+                {renderSearchAdressResult}
+            </div>
             {renderBtnNoAddress}
-        </main>
+            {renderBtnContinueVisible}
+        </main >
     );
 }
 

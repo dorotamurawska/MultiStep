@@ -1,5 +1,6 @@
 .step-one {
-    padding: 28px 100px;
+    flex-grow: 1;
+    padding: 28px 100px 0;
     font-family: 'Neuzeit Grotesk', sans-serif;
     color: var(--dark-txt);
 
@@ -39,11 +40,12 @@
             width: 65%;
             min-width: 216px;
             align-self: flex-end;
+            margin: 0;
         }
     }
 
     &__btn-no-adress {
-        margin: 28px 0 84px;
+        margin: 0 0 28px;
         padding: 0;
         background-color: transparent;
         font-size: 16px;
@@ -58,5 +60,42 @@
         margin: 28px 0 14px;
         padding: 0;
         color: var(--blue);
+    }
+
+    &__list {
+        width: 40%;
+        max-width: 370px;
+        max-height: 315px;
+        margin: 14px 0 28px;
+        background: var(--bright);
+        box-shadow: 0px 4px 16px #CCCCCC;
+        border-radius: 5px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 92%, #CCCCCC 100%);
+        // overflow-x: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+
+            // height: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            width: 0px;
+            // background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            // background: #888;
+            // background:  var(--blue);
+            // border-radius: 10px;
+        }
+    }
+
+    .button {
+        margin: 0 0 56px;
+        width: 25%;
     }
 }
