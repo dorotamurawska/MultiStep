@@ -1,4 +1,59 @@
 .step-two {
     flex-grow: 1;
+    position: relative;
+    width: 60%;
+    padding: 0 0 0 100px;
 
+    &__btns-wrap {
+        padding: 35px 0 45px;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        min-width: 326px;
+
+        .step-two__txt-wrap {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .step-two__arrow {
+                width: 20px;
+                height: auto;
+                display: block;
+                margin-right: 10px;
+                filter: invert(37%) sepia(10%) saturate(18%) hue-rotate(328deg) brightness(103%) contrast(93%);
+            }
+
+            .step-two__txt-back {
+                color: var(--dark-gray);
+            }
+
+            &:hover {
+                .step-two__arrow {
+                    filter: invert(53%) sepia(96%) saturate(7482%) hue-rotate(240deg) brightness(99%) contrast(88%);
+                }
+
+                .step-two__txt-back {
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+
+    .select-input {
+        position: relative;
+
+        &:nth-child(1) {
+            z-index: 10;
+        }
+
+        &:nth-child(2) {
+            z-index: 5;
+        }
+
+        &:nth-child(3) {
+            z-index: 3;
+        }
+    }
 }

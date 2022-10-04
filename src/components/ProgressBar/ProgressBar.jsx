@@ -12,8 +12,8 @@ const ProgressBar = ({ currentStep }) => {
             <Circle number={1} active={currentStep >= 1} />
             <Line active={currentStep >= 2} />
             <Circle number={2} active={currentStep >= 2} />
-            <Line active={currentStep === 3} />
-            <Circle number={3} active={currentStep === 3} />
+            <Line active={currentStep === 4} />
+            <Circle number={3} active={currentStep === 4} />
         </div>
     );
 }

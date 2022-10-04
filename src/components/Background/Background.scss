@@ -1,8 +1,4 @@
 .background {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // height: 100vh;
     width: 50%;
     z-index: -1;
     overflow: hidden;
@@ -15,15 +11,15 @@
 
     &__wrap-img:nth-child(2) {
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
+        transform: translateY(30%);
     }
 
     &__wrap-img:nth-child(3) {
         position: absolute;
         top: 120px;
         right: 0;
-        // z-index: 2;
     }
 
     &__ellipse-blue,

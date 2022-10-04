@@ -1,42 +1,68 @@
 import { useState } from 'react';
 
 // components:
-// import Button from '../Button/Button';
-// import Input from '../Input/Input';
-// import ListItem from '../ListItem/ListItem';
+import Button from '../Button/Button';
+import Links from '../Links/Links';
+import SelectInput from '../SelectInput/SelectInput';
 
-// data:
-// import { adresses } from '../../dataForApp/adresses';
+// svg:
+import backArrow from '../../svg/back_arrow.svg';
 
 // style:
 import './StepTwo.scss';
 
-const StepTwo = () => {
+const StepTwo = ({ setCurrentStep }) => {
 
+    const [selectedOptions, setSelectedOptions] = useState(
+        {
+            providers: '',
+            speed: '',
+            broadband: ''
+        });
 
-    // const adressData = adresses;
+    // data for inputs:
+    const providersArr = ['BT', 'Sky', 'Consumer Choices', 'Virgin media', 'vodafone'];
+    const speedArr = ['0 - 30mbps', '30 - 60mbps', '60mbps +'];
+    const broadbandArr = ['DSL', 'cable modem', 'fiber', 'wireless', 'satellite', 'BPL'];
 
-    const handleGoToStepOne = () => { };
+    const handleGoToStepOne = () => setCurrentStep(1);
 
-    const handleGoToStepThree = () => { };
+    const handleGoToStepThree = () => setCurrentStep(3);
 
     return (
         <main className="step-two">
-            <h2 className="step-one__subtitle">{`Who provides your current Broadband?`}</h2>
-            {/* <form className="step-one__form" onSubmit={handleBtnSearchAdress}>
-                <Input
-                    txt='eg. SW1A 1AA'
-                    value={inputAdress}
-                    onChange={handleInputAdress}
+            <SelectInput
+                name={'providers'}
+                valuesArr={providersArr}
+                label={'Who provides your current Broadband?'}
+                setSelectedOptions={setSelectedOptions}
+                selectedOptions={selectedOptions}
+            />
+            <SelectInput
+                name={'speed'}
+                valuesArr={speedArr}
+                label={'What’s your ideal speed?'}
+                setSelectedOptions={setSelectedOptions}
+                selectedOptions={selectedOptions}
+            />
+            <SelectInput
+                name={'broadband'}
+                valuesArr={broadbandArr}
+                label={'What’s your ideal speed?'}
+                setSelectedOptions={setSelectedOptions}
+                selectedOptions={selectedOptions}
+            />
+            <div className="step-two__btns-wrap">
+                <div className="step-two__txt-wrap" onClick={handleGoToStepOne}>
+                    <img src={backArrow} className='step-two__arrow' alt="back arrow icon" />
+                    <p className='step-two__txt-back'>Back</p>
+                </div>
+                <Button
+                    txt={'Continue'}
+                    onClick={handleGoToStepThree}
                 />
-                {renderBtnFindAddressVisible}
-            </form>
-            {renderNumberOfResults}
-            <div className="step-one__list">
-                {renderSearchAdressResult}
             </div>
-            {renderBtnNoAddress}
-            {renderBtnContinueVisible} */}
+            <Links />
         </main >
     );
 }
