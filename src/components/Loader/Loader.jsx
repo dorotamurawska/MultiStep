@@ -3,11 +3,11 @@ import { useEffect } from 'react';
 // style:
 import './Loader.scss';
 
-const Loader = ({ setCurrentStep }) => {
+const Loader = ({ setCurrentStep, stepThree }) => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setCurrentStep(4);
+            setCurrentStep(stepThree);
         }, 4000);
         return () => clearTimeout(timer);
     }, []);

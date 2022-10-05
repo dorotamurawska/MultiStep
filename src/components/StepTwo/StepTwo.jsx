@@ -11,7 +11,7 @@ import backArrow from '../../svg/back_arrow.svg';
 // style:
 import './StepTwo.scss';
 
-const StepTwo = ({ setCurrentStep }) => {
+const StepTwo = ({ setCurrentStep, loader, stepOne }) => {
 
     const [selectedOptions, setSelectedOptions] = useState(
         {
@@ -25,9 +25,11 @@ const StepTwo = ({ setCurrentStep }) => {
     const speedArr = ['0 - 30mbps', '30 - 60mbps', '60mbps +'];
     const broadbandArr = ['DSL', 'cable modem', 'fiber', 'wireless', 'satellite', 'BPL'];
 
-    const handleGoToStepOne = () => setCurrentStep(1);
+    const handleGoToStepOne = () => setCurrentStep(stepOne);
 
-    const handleGoToStepThree = () => setCurrentStep(3);
+    const handleGoToStepThree = () => setCurrentStep(loader);
+
+    const btnDisabled = Object.values(selectedOptions).includes("");
 
     return (
         <main className="step-two">
@@ -60,6 +62,7 @@ const StepTwo = ({ setCurrentStep }) => {
                 <Button
                     txt={'Continue'}
                     onClick={handleGoToStepThree}
+                    disabled={btnDisabled}
                 />
             </div>
             <Links />

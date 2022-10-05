@@ -1,6 +1,55 @@
 .step-three {
-    width: 33%;
+    width: 30%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    &__form {
+        padding-top: 56px;
+        width: 100%;
+
+        .input {
+            width: 100%;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    .links {
+        padding-bottom: 30px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__txt {
+        padding: 12px 0 23px;
+        font-size: 12px;
+        line-height: 21px;
+        color: var(--medium-gray);
+        text-align: center;
+    }
+
+    &__txt-wrap {
+        align-self: flex-start;
+        display: flex;
+        color: var(--dark-gray);
+        font-size: 16px;
+        line-height: 28px;
+        cursor: pointer;
+        .step-three__txt-back {
+            padding-left: 10px;
+        }
+        &:hover {
+            .step-three__arrow {
+                filter: invert(53%) sepia(96%) saturate(7482%) hue-rotate(240deg) brightness(99%) contrast(88%);
+            }
+
+            .step-three__txt-back {
+                color: var(--blue);
+            }
+        }
+    }
 }

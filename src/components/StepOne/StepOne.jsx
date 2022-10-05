@@ -11,7 +11,7 @@ import { adresses } from '../../dataForApp/adresses';
 // style:
 import './StepOne.scss';
 
-const StepOne = ({ setCurrentStep }) => {
+const StepOne = ({ setCurrentStep, stepTwo }) => {
 
     const [inputAdress, setInputAdress] = useState('');
     const [searchAdressResult, setSearchAdressResult] = useState([]);
@@ -44,7 +44,7 @@ const StepOne = ({ setCurrentStep }) => {
 
     const handleActiveListElement = (e) => setActiveListElem(e.currentTarget.id);
 
-    const handleGoToStepTwo = () => setCurrentStep(2);
+    const handleGoToStepTwo = () => setCurrentStep(stepTwo);
 
     const renderBtnFindAddressVisible = btnFindAddressVisible ?
         <Button
@@ -76,6 +76,7 @@ const StepOne = ({ setCurrentStep }) => {
                     txt='eg. SW1A 1AA'
                     value={inputAdress}
                     onChange={handleInputAdress}
+                    name={'postcode'}
                 />
                 {renderBtnFindAddressVisible}
             </form>

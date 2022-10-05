@@ -1,23 +1,78 @@
-.input {
-    display: block;
-    box-sizing: border-box;
-    padding: 16px;
-    margin: 16px 0 28px;
-    min-width: 320px;
-    box-shadow: 0px 4px 16px #CCCCCC;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    line-height: 28px;
-    color: var(--dark-txt);
-    font-family: 'Neuzeit Grotesk', sans-serif;
-
-    &::placeholder {
-        // font-family: 'Neuzeit Grotesk', sans-serif;
-        // font-weight: 400;
+.wrap {
+    .input:not(.checkbox) {
+        display: block;
+        box-sizing: border-box;
+        padding: 16px;
+        margin: 16px 0 28px;
+        min-width: 320px;
+        box-shadow: 0px 4px 16px #CCCCCC;
+        border-radius: 5px;
+        outline: none;
+        border: none;
         font-size: 16px;
         line-height: 28px;
-        color: var(--gray-txt);
+        color: var(--dark-txt);
+        font-family: 'Neuzeit Grotesk', sans-serif;
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 28px;
+            color: var(--gray-txt);
+        }
+    }
+
+    .label {
+        padding-bottom: 10px;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+
+        &.checkbox {
+            width: calc(100% - 24px);
+            padding: 0 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: var(--dark-gray);
+            cursor: pointer;
+        }
+    }
+
+    &.checkbox {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-bottom: 30px;
+
+        .input {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--blue);
+            border-radius: 5px;
+            background-color: var(--bright);
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -o-appearance: none;
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: '';
+                width: 18px;
+                height: 18px;
+                background-color: var(--blue);
+                border-radius: 4px;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            &.active::after {
+                opacity: 0.8;
+            }
+        }
     }
 }

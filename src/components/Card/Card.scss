@@ -1,0 +1,95 @@
+.card {
+    // width: 343px;
+    position: relative;
+    padding: 60px 0 0;
+    width: 100%;
+    min-width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        min-width: 232px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--blue);
+        border-radius: 100px;
+
+        .card__info {
+            padding-left: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 32px;
+            color: var(--bright);
+        }
+
+        .card__number {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+            color: var(--green);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 21px;
+        min-height: 463px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bright);
+        box-shadow: 0px 4px 16px #CCCCCC;
+        border-radius: 10px;
+
+        .card__txt {
+            padding-top: 14px;
+            font-size: 14px;
+            line-height: 21px;
+            color: var(--medium-gray);
+
+            &.p {
+                padding-top: 7px;
+            }
+        }
+
+        .card__imgs-wrap {
+            display: flex;
+            justify-content: space-between;
+
+            .card__img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .card__price {
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 56px;
+            letter-spacing: -0.01em;
+            color: var(--blue);
+        }
+
+        .button {
+            margin-top: 21px;
+            background-color: var(--green);
+        }
+
+        .card_features {
+            display: flex;
+            align-items: center;
+            padding: 14px 0 0;
+
+            .card_feature {
+                padding-left: 10px;
+            }
+        }
+    }
+}

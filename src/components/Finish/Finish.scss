@@ -1,0 +1,14 @@
+.finish {
+    position: relative;
+    flex-grow: 1;
+
+    &__thx {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, - 50%);
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--blue);
+    }
+}
