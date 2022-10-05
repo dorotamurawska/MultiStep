@@ -1,5 +1,9 @@
 ## Available Scripts
 
+## go live: https://9vj0tc-3000.preview.csb.app/
+
+or
+
 1. download the package
 
 2. ### `npm install`
