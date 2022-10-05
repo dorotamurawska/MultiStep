@@ -13,7 +13,7 @@ import './StepOne.scss';
 
 const StepOne = ({ setCurrentStep, stepTwo }) => {
 
-    const [inputAdress, setInputAdress] = useState('');
+    const [inputAdress, setInputAdress] = useState('po8 8jd');
     const [searchAdressResult, setSearchAdressResult] = useState([]);
     const [btnFindAddressVisible, setFindAddressVisible] = useState(true);
     const [btnNoAddressVisible, setBtnNoAddressVisible] = useState(false);
