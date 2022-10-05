@@ -30,3 +30,13 @@
         display: block;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .background {
+
+        &__wrap-img:nth-child(3) {
+            display: none;
+        }
+
+    }
+}

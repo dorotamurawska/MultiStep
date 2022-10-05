@@ -8,6 +8,7 @@
     &__form {
         padding-top: 56px;
         width: 100%;
+        min-width: 343px;
 
         .input {
             width: 100%;
@@ -39,9 +40,11 @@
         font-size: 16px;
         line-height: 28px;
         cursor: pointer;
+
         .step-three__txt-back {
             padding-left: 10px;
         }
+
         &:hover {
             .step-three__arrow {
                 filter: invert(53%) sepia(96%) saturate(7482%) hue-rotate(240deg) brightness(99%) contrast(88%);
@@ -51,5 +54,24 @@
                 color: var(--blue);
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .step-three {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .step-three {
+        padding: 0 32px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .step-three {
+        padding: 0 16px;
     }
 }

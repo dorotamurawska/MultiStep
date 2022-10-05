@@ -1,5 +1,4 @@
 .card {
-    // width: 343px;
     position: relative;
     padding: 60px 0 0;
     width: 100%;
@@ -80,6 +79,12 @@
         .button {
             margin-top: 21px;
             background-color: var(--green);
+
+            &:hover {
+                background-color: transparent;
+                border: 2px solid var(--green);
+                color: var(--green);
+            }
         }
 
         .card_features {

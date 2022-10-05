@@ -1,7 +1,7 @@
 .step-two {
     flex-grow: 1;
     position: relative;
-    width: 60%;
+    width: 100%;
     padding: 0 0 0 100px;
 
     &__btns-wrap {
@@ -55,5 +55,26 @@
         &:nth-child(3) {
             z-index: 3;
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .step-two {
+        padding: 0 32px;
+
+        &__btns-wrap {
+            flex-direction: column-reverse;
+            width: 100%;
+
+            .step-two__txt-wrap {
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .step-two {
+        padding: 0 16px;
     }
 }

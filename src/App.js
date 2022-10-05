@@ -22,7 +22,7 @@ const App = () => {
   const STEP_THREE = 4;
   const FINISH = 5;
 
-  const [currentStep, setCurrentStep] = useState(STEP_THREE);
+  const [currentStep, setCurrentStep] = useState(STEP_ONE);
 
   const renderCurrentStep = () => {
     if (currentStep === STEP_ONE) return <StepOne setCurrentStep={setCurrentStep} stepTwo={STEP_TWO} />

@@ -1,8 +1,19 @@
 .progress-bar {
-    box-sizing: border-box;
     width: 100%;
     padding: 35px 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .progress-bar {
+        padding: 35px 32px 0;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .progress-bar {
+        padding: 35px 16px 0;
+    }
 }
