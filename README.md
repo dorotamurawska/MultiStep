@@ -1,6 +1,6 @@
 ## Available Scripts
 
-## go live: https://9vj0tc-3000.preview.csb.app/
+## go live: https://5y7xl9-3000.preview.csb.app/
 
 or
 
