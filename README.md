@@ -1,9 +1,5 @@
 ## Available Scripts
 
-## go live: https://5y7xl9-3000.preview.csb.app/
-
-or
-
 1. download the package
 
 2. ### `npm install`
